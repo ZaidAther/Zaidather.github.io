@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muhammad Zaid Ather — AI Engineer</title>
+  <meta name="description" content="Muhammad Zaid Ather — AI Engineer & Data Scientist. M.Sc. Artificial Intelligence at FAU Erlangen. LLM apps, data pipelines and ML systems.">
+  <meta name="theme-color" content="#05060a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <div class="loader__logo">ZA</div>
+      <div class="loader__bar"><span id="loaderBar"></span></div>
+      <div class="loader__count"><span id="loaderCount">0</span>%</div>
+    </div>
+  </div>
+
+  <!-- Page transition curtain -->
+  <div class="curtain" id="curtain"><span></span><span></span><span></span><span></span><span></span></div>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- Scroll progress -->
+  <div class="progress" id="progress"></div>
+
+  <!-- Background -->
+  <canvas id="bg3d"></canvas>
+  <div class="aurora">
+    <div class="aurora__blob a1"></div>
+    <div class="aurora__blob a2"></div>
+    <div class="aurora__blob a3"></div>
+  </div>
+  <div class="grain"></div>
+
+  <!-- Nav -->
+  <header class="nav glass" id="nav">
+    <a href="#home" class="nav__logo" data-link>ZA<span>.</span></a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about" data-link>About</a>
+      <a href="#skills" data-link>Skills</a>
+      <a href="#experience" data-link>Experience</a>
+      <a href="#projects" data-link>Projects</a>
+      <a href="#contact" data-link>Contact</a>
+    </nav>
+    <a href="assets/M_Zaid_Ather_CV.pdf" class="btn btn--sm magnetic" download>Résumé</a>
+    <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+  </header>
+
+  <main id="smooth">
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero__content">
+        <div class="hero__badge glass reveal-up">
+          <span class="pulse"></span> Open to roles in AI &amp; Data · Germany
+        </div>
+        <h1 class="hero__title">
+          <span class="line"><span class="split">Muhammad</span></span>
+          <span class="line"><span class="split gradient-text">Zaid Ather</span></span>
+        </h1>
+        <p class="hero__role reveal-up">
+          <span class="mono">&gt;</span> <span id="typed"></span><span class="caret">|</span>
+        </p>
+        <p class="hero__sub reveal-up">
+          M.Sc. Artificial Intelligence student at FAU Erlangen. I build LLM-powered tools,
+          data pipelines and machine-learning systems that replace manual work.
+        </p>
+        <div class="hero__cta reveal-up">
+          <a href="#projects" class="btn btn--primary magnetic" data-link><span>View my work</span></a>
+          <a href="#contact" class="btn btn--ghost magnetic" data-link><span>Get in touch</span></a>
+        </div>
+        <div class="hero__socials reveal-up">
+          <a href="https://github.com/ZaidAther" target="_blank" rel="noopener" class="icon-btn glass magnetic" aria-label="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/zaidather" target="_blank" rel="noopener" class="icon-btn glass magnetic" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+          </a>
+          <a href="tel:+4915905604545" class="icon-btn glass magnetic" aria-label="Phone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          </a>
+          <a href="mailto:zaidather89@gmail.com" class="icon-btn glass magnetic" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 6 9 7 9-7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero__scroll">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee">
+      <div class="marquee__track">
+        <span>Python</span><i>✦</i><span>LLMs</span><i>✦</i><span>RAG</span><i>✦</i><span>PyTorch</span><i>✦</i><span>LangChain</span><i>✦</i><span>FastAPI</span><i>✦</i><span>ETL Pipelines</span><i>✦</i><span>Docker</span><i>✦</i><span>Apache Spark</span><i>✦</i><span>AWS</span><i>✦</i><span>NLP</span><i>✦</i><span>MCP</span><i>✦</i>
+        <span>Python</span><i>✦</i><span>LLMs</span><i>✦</i><span>RAG</span><i>✦</i><span>PyTorch</span><i>✦</i><span>LangChain</span><i>✦</i><span>FastAPI</span><i>✦</i><span>ETL Pipelines</span><i>✦</i><span>Docker</span><i>✦</i><span>Apache Spark</span><i>✦</i><span>AWS</span><i>✦</i><span>NLP</span><i>✦</i><span>MCP</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="section__head">
+        <span class="eyebrow">01 — About</span>
+        <h2 class="section__title split-words">Turning messy data and manual work into <em>intelligent systems.</em></h2>
+      </div>
+      <div class="about">
+        <div class="about__card glass tilt spotlight reveal-card">
+          <div class="about__avatar">
+            <div class="about__ring"></div>
+            <span>ZA</span>
+          </div>
+          <p>
+            I'm an AI developer and data scientist based in <strong>Erlangen, Germany</strong>, currently
+            pursuing my <strong>M.Sc. in Artificial Intelligence at FAU</strong>.
+          </p>
+          <p>
+            I've built automation pipelines at <strong>BASF</strong>, shipped LLM-powered features at
+            <strong>Helpsta</strong> and engineered ETL workflows at <strong>Hikerr</strong>. I like the
+            space where solid software engineering meets modern AI: RAG, local LLMs, NLP and clean,
+            reliable data.
+          </p>
+          <div class="about__langs">
+            <span class="chip">🇬🇧 English — Fluent</span>
+            <span class="chip">🇩🇪 German — Improving</span>
+          </div>
+        </div>
+        <div class="about__stats">
+          <div class="stat glass tilt spotlight reveal-card">
+            <div class="stat__num"><span class="count" data-to="3">0</span></div>
+            <div class="stat__label">Companies, from enterprise to startup</div>
+          </div>
+          <div class="stat glass tilt spotlight reveal-card">
+            <div class="stat__num"><span class="count" data-to="5">0</span></div>
+            <div class="stat__label">AI, data &amp; web projects shipped</div>
+          </div>
+          <div class="stat glass tilt spotlight reveal-card">
+            <div class="stat__num"><span class="count" data-to="20">0</span>+</div>
+            <div class="stat__label">Tools &amp; frameworks in daily use</div>
+          </div>
+          <div class="stat glass tilt spotlight reveal-card">
+            <div class="stat__num">M.Sc.</div>
+            <div class="stat__label">Artificial Intelligence · FAU</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="section__head">
+        <span class="eyebrow">02 — Skills</span>
+        <h2 class="section__title split-words">The stack I <em>build with.</em></h2>
+      </div>
+      <div class="skills">
+        <div class="skill glass tilt spotlight reveal-card">
+          <div class="skill__icon">⌘</div>
+          <h3>Programming &amp; Analytics</h3>
+          <div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">JavaScript</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Jupyter</span><span class="chip">Git</span><span class="chip">Excel</span><span class="chip">Power BI</span></div>
+        </div>
+        <div class="skill glass tilt spotlight reveal-card">
+          <div class="skill__icon">◈</div>
+          <h3>Data Science &amp; ML</h3>
+          <div class="chips"><span class="chip">Scikit-learn</span><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">EDA</span><span class="chip">Statistical Analysis</span><span class="chip">Feature Engineering</span><span class="chip">Deep Learning</span><span class="chip">Model Evaluation</span></div>
+        </div>
+        <div class="skill glass tilt spotlight reveal-card">
+          <div class="skill__icon">✦</div>
+          <h3>LLMs, NLP &amp; RAG</h3>
+          <div class="chips"><span class="chip">Prompt Engineering</span><span class="chip">GPT-4o</span><span class="chip">Claude</span><span class="chip">Gemini</span><span class="chip">LLaMA</span><span class="chip">LangChain</span><span class="chip">MCP</span><span class="chip">Transformers</span><span class="chip">FAISS</span><span class="chip">spaCy</span></div>
+        </div>
+        <div class="skill glass tilt spotlight reveal-card">
+          <div class="skill__icon">⇄</div>
+          <h3>Data Engineering</h3>
+          <div class="chips"><span class="chip">PostgreSQL</span><span class="chip">ETL / ELT</span><span class="chip">Data Pipelines</span><span class="chip">Data Warehousing</span><span class="chip">Data Validation</span><span class="chip">Apache Spark</span><span class="chip">Airflow</span></div>
+        </div>
+        <div class="skill glass tilt spotlight reveal-card">
+          <div class="skill__icon">▲</div>
+          <h3>Deployment &amp; MLOps</h3>
+          <div class="chips"><span class="chip">Docker</span><span class="chip">AWS</span><span class="chip">MLflow</span><span class="chip">FastAPI</span><span class="chip">Flask</span><span class="chip">Streamlit</span><span class="chip">REST APIs</span></div>
+        </div>
+        <div class="skill glass tilt spotlight reveal-card">
+          <div class="skill__icon">◎</div>
+          <h3>How I Work</h3>
+          <div class="chips"><span class="chip">Stakeholder Communication</span><span class="chip">Cross-Functional Collaboration</span><span class="chip">Analytical Problem-Solving</span><span class="chip">Adaptability</span><span class="chip">Initiative</span><span class="chip">Attention to Detail</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="section__head">
+        <span class="eyebrow">03 — Experience</span>
+        <h2 class="section__title split-words">Where I've <em>made an impact.</em></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline__line"><div class="timeline__fill" id="timelineFill"></div></div>
+
+        <article class="job">
+          <div class="job__dot"></div>
+          <div class="job__card glass tilt spotlight">
+            <div class="job__meta">
+              <span class="job__date mono">Jan 2026 — Apr 2026</span>
+              <span class="job__loc">Ludwigshafen, DE</span>
+            </div>
+            <h3>Data Science Intern <span class="job__at">@ BASF SE</span></h3>
+            <p class="job__team">Management Consulting</p>
+            <ul>
+              <li>Digitized a client survey tool, replacing Excel-based workflows with a centralized Python (Streamlit) app and scalable pipelines for data ingestion, validation and transformation.</li>
+              <li>Integrated PostgreSQL via SQLAlchemy, added role-based access control (RBAC) with LDAP authentication, and built real-time dashboards for workflow tracking and reviews.</li>
+              <li>Deployed the app through BASF's internal app store, reducing manual effort, improving data quality and speeding up decisions.</li>
+              <li>Supported the Management Consulting Data Lab with analytical solutions and data-governance processes.</li>
+            </ul>
+            <blockquote class="job__quote">“His performance far exceeded our expectations and requirements.”<cite>BASF SE, internship certificate</cite></blockquote>
+            <div class="chips"><span class="chip">Python</span><span class="chip">Streamlit</span><span class="chip">PostgreSQL</span><span class="chip">SQLAlchemy</span><span class="chip">RBAC / LDAP</span><span class="chip">Dashboards</span></div>
+            <a class="doc-link" href="assets/BASF_Experience_Letter.pdf" target="_blank" rel="noopener" data-hover="View"><span class="doc-link__icon">📄</span> View experience letter <i>↗</i></a>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="job__dot"></div>
+          <div class="job__card glass tilt spotlight">
+            <div class="job__meta">
+              <span class="job__date mono">May 2025 — Aug 2025</span>
+              <span class="job__loc">Nuremberg, DE</span>
+            </div>
+            <h3>AI Developer <span class="job__at">@ Helpsta</span></h3>
+            <p class="job__team">Working Student</p>
+            <ul>
+              <li>Developed and deployed Python and ML solutions for real-time data analysis and prediction.</li>
+              <li>Integrated OpenAI LLMs into production apps for chatbots, summarization and content generation.</li>
+              <li>Built a voice-driven AI interview app with Google Gemini: question generation, transcription and candidate evaluation.</li>
+            </ul>
+            <div class="chips"><span class="chip">OpenAI</span><span class="chip">Gemini</span><span class="chip">LLMs</span><span class="chip">APIs</span></div>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="job__dot"></div>
+          <div class="job__card glass tilt spotlight">
+            <div class="job__meta">
+              <span class="job__date mono">Oct 2023 — Sep 2024</span>
+              <span class="job__loc">Lahore, PK</span>
+            </div>
+            <h3>Data Analyst <span class="job__at">@ Hikerr</span></h3>
+            <p class="job__team">Data &amp; Analytics</p>
+            <ul>
+              <li>Developed Python and SQL ETL pipelines for structured and unstructured data.</li>
+              <li>Implemented automated data-quality checks and validation workflows.</li>
+              <li>Automated recurring reporting, accelerating reporting cycles.</li>
+            </ul>
+            <div class="chips"><span class="chip">SQL</span><span class="chip">ETL</span><span class="chip">Python</span><span class="chip">Reporting</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="section__head">
+        <span class="eyebrow">04 — Projects</span>
+        <h2 class="section__title split-words">Selected <em>work.</em></h2>
+      </div>
+      <div class="projects">
+
+        <a class="project glass tilt spotlight reveal-card project--wide" href="https://github.com/ZaidAther/sentinel-pr-risk-analysis" target="_blank" rel="noopener" data-hover="Open">
+          <div class="project__visual v-graph">
+            <svg viewBox="0 0 400 200" class="graph">
+              <g class="edges">
+                <line x1="60" y1="100" x2="150" y2="50"/><line x1="60" y1="100" x2="150" y2="150"/>
+                <line x1="150" y1="50" x2="250" y2="40"/><line x1="150" y1="50" x2="250" y2="110"/>
+                <line x1="150" y1="150" x2="250" y2="110"/><line x1="150" y1="150" x2="250" y2="170"/>
+                <line x1="250" y1="40" x2="340" y2="80"/><line x1="250" y1="110" x2="340" y2="80"/>
+                <line x1="250" y1="170" x2="340" y2="140"/><line x1="250" y1="110" x2="340" y2="140"/>
+              </g>
+              <g class="nodes">
+                <circle cx="60" cy="100" r="9" class="hot"/><circle cx="150" cy="50" r="7"/><circle cx="150" cy="150" r="7" class="warn"/>
+                <circle cx="250" cy="40" r="6"/><circle cx="250" cy="110" r="7" class="warn"/><circle cx="250" cy="170" r="6"/>
+                <circle cx="340" cy="80" r="6"/><circle cx="340" cy="140" r="6" class="warn"/>
+              </g>
+            </svg>
+          </div>
+          <div class="project__body">
+            <div class="project__top"><span class="project__num mono">01</span><span class="project__tag">Developer Tooling · Local LLM</span></div>
+            <h3>Sentinel</h3>
+            <p>Software impact &amp; PR risk analysis. Parses code with tree-sitter ASTs, builds a NetworkX dependency graph and uses semantic search with a local LLM (Ollama) to predict which parts of a codebase a change will break. No API costs, runs fully local, with an interactive Streamlit UI.</p>
+            <div class="chips"><span class="chip">Python</span><span class="chip">tree-sitter</span><span class="chip">NetworkX</span><span class="chip">Ollama</span><span class="chip">Streamlit</span></div>
+            <span class="project__link">View on GitHub <i>↗</i></span>
+          </div>
+        </a>
+
+        <a class="project glass tilt spotlight reveal-card" href="https://github.com/ZaidAther/resume-intelligence-system" target="_blank" rel="noopener" data-hover="Open">
+          <div class="project__visual v-match">
+            <div class="match">
+              <div class="match__doc"><i></i><i></i><i></i><i></i></div>
+              <div class="match__score"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.9"/><circle cx="18" cy="18" r="15.9" class="arc"/></svg><span>87%</span></div>
+              <div class="match__doc"><i></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="project__body">
+            <div class="project__top"><span class="project__num mono">02</span><span class="project__tag">NLP · RAG</span></div>
+            <h3>Resume Intelligence</h3>
+            <p>An AI resume-screening engine. It matches resumes to job descriptions using embeddings and FAISS, gives explainable hiring scores, simulates an ATS check and uses RAG to find skill gaps.</p>
+            <div class="chips"><span class="chip">spaCy</span><span class="chip">FAISS</span><span class="chip">Sentence-Transformers</span><span class="chip">RAG</span></div>
+            <span class="project__link">View on GitHub <i>↗</i></span>
+          </div>
+        </a>
+
+        <a class="project glass tilt spotlight reveal-card" href="https://github.com/ZaidAther/Voice-Driven-Interviewer" target="_blank" rel="noopener" data-hover="Open">
+          <div class="project__visual v-voice">
+            <div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="project__body">
+            <div class="project__top"><span class="project__num mono">03</span><span class="project__tag">Voice AI · Gemini</span></div>
+            <h3>Voice-Driven Interviewer</h3>
+            <p>An AI interviewer you talk to. Google Gemini generates the questions, transcribes spoken answers, evaluates the candidate and exports a PDF report.</p>
+            <div class="chips"><span class="chip">Gemini</span><span class="chip">Speech-to-Text</span><span class="chip">Python</span><span class="chip">PDF Reports</span></div>
+            <span class="project__link">View on GitHub <i>↗</i></span>
+          </div>
+        </a>
+
+        <a class="project glass tilt spotlight reveal-card" href="https://github.com/ZaidAther/FitEase" target="_blank" rel="noopener" data-hover="Open">
+          <div class="project__visual v-fit">
+            <div class="rings">
+              <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" class="r1"/><circle cx="50" cy="50" r="30" class="r2"/><circle cx="50" cy="50" r="20" class="r3"/></svg>
+            </div>
+          </div>
+          <div class="project__body">
+            <div class="project__top"><span class="project__num mono">04</span><span class="project__tag">ML Clustering · Health</span></div>
+            <h3>FitEase</h3>
+            <p>An AI-based community center app built with Flask. It clusters user profiles to recommend personalized diet and workout plans, drawing on gym exercise and nutrition datasets.</p>
+            <div class="chips"><span class="chip">Flask</span><span class="chip">Clustering</span><span class="chip">Scikit-learn</span><span class="chip">SQLite</span></div>
+            <span class="project__link">View on GitHub <i>↗</i></span>
+          </div>
+        </a>
+
+        <a class="project glass tilt spotlight reveal-card" href="https://cqs.com.pk/" target="_blank" rel="noopener" data-hover="Visit">
+          <div class="project__visual v-web">
+            <div class="browser">
+              <div class="browser__bar"><i></i><i></i><i></i><span>cqs.com.pk</span></div>
+              <div class="browser__page"><div class="browser__hero"></div><div class="browser__row"><i></i><i></i><i></i></div><div class="browser__row"><i></i><i></i><i></i></div></div>
+            </div>
+          </div>
+          <div class="project__body">
+            <div class="project__top"><span class="project__num mono">05</span><span class="project__tag">Client Work · Web Development</span></div>
+            <h3>CQS Pakistan</h3>
+            <p>A live corporate website I built for a client: an IT services, consulting and training firm founded in 1999. It's a responsive, multi-page site with a services mega-menu, animated stats, client showcase, testimonials and office locations.</p>
+            <div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Responsive Design</span></div>
+            <span class="project__link project__link--live">Visit live site <i>↗</i></span>
+          </div>
+        </a>
+
+
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <div class="section__head">
+        <span class="eyebrow">05 — Education &amp; Certifications</span>
+        <h2 class="section__title split-words">Always <em>learning.</em></h2>
+      </div>
+      <div class="edu">
+        <div class="edu__main glass tilt spotlight reveal-card">
+          <div class="edu__icon">🎓</div>
+          <span class="mono edu__date">2025 — Present</span>
+          <h3>M.Sc. Artificial Intelligence</h3>
+          <p>Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)</p>
+          <span class="edu__loc">Erlangen, Germany</span>
+          <div class="edu__prev">
+            <span class="mono edu__date">2020 — 2024</span>
+            <h4>B.Sc. Computer Science (Honors)</h4>
+            <p>Forman Christian College University (FCCU) · Lahore, Pakistan</p>
+            <a class="doc-link" href="assets/BSc_Degree_FCCU.pdf" target="_blank" rel="noopener" data-hover="View"><span class="doc-link__icon">🎓</span> View degree certificate <i>↗</i></a>
+          </div>
+        </div>
+        <div class="edu__certs">
+          <a class="cert glass tilt spotlight reveal-card" href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_XBajyaivGpJTSi8Mx_1740651168109_completion_certificate.pdf" target="_blank" rel="noopener" data-hover="View">
+            <span class="cert__badge">BCG X</span>
+            <div><h4>Data Science Job Simulation</h4><p>Boston Consulting Group · Forage</p><span class="cert__link">View certificate ↗</span></div>
+          </a>
+          <a class="cert glass tilt spotlight reveal-card" href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Cognizant/ZZswQd6xGydd758vz_Cognizant_c2f6pbCynTZpBdZcR_1692369966997_completion_certificate.pdf" target="_blank" rel="noopener" data-hover="View">
+            <span class="cert__badge">CTSH</span>
+            <div><h4>Agile Methodology Virtual Experience</h4><p>Cognizant · Forage</p><span class="cert__link">View certificate ↗</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <span class="eyebrow">06 — Contact</span>
+      <h2 class="contact__title">
+        <span class="line"><span class="split">Let's build</span></span>
+        <span class="line"><span class="split gradient-text">something smart.</span></span>
+      </h2>
+      <p class="contact__sub">Open to AI, ML and data roles, working-student positions and interesting collaborations.</p>
+      <a href="mailto:zaidather89@gmail.com" class="contact__mail magnetic">zaidather89@gmail.com</a>
+      <div class="contact__grid">
+        <a href="https://linkedin.com/in/zaidather" target="_blank" rel="noopener" class="contact__card glass tilt spotlight"><span>LinkedIn</span><b>/in/zaidather ↗</b></a>
+        <a href="https://github.com/ZaidAther" target="_blank" rel="noopener" class="contact__card glass tilt spotlight"><span>GitHub</span><b>@ZaidAther ↗</b></a>
+        <a href="tel:+4915905604545" class="contact__card glass tilt spotlight"><span>Phone</span><b>+49 159 0560 4545</b></a>
+        <a href="assets/M_Zaid_Ather_CV.pdf" download class="contact__card glass tilt spotlight"><span>Résumé</span><b>Download PDF ↓</b></a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Muhammad Zaid Ather</span>
+      <span class="mono">Erlangen, Germany · <span id="clock"></span></span>
+      <a href="#home" data-link class="footer__top">Back to top ↑</a>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
